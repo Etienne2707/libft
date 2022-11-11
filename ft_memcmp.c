@@ -1,0 +1,40 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   memcmp.c                                           :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: educlos <marvin@42.fr>                     +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2022/11/08 13:37:37 by educlos           #+#    #+#             */
+/*   Updated: 2022/11/08 13:44:14 by educlos          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+#include <stdio.h>
+
+int ft_memcmp( const void * p1, const void * p2, size_t size)
+{
+	int i;
+	int *tmp;
+	int *tmp2;
+
+	tmp = (int *)p1;
+	tmp2 = (int *)p2;
+	i = 0;
+	while (i < size)
+	{
+		if (tmp[i] != tmp2[i])
+			return (tmp[i] - tmp2[i]);
+		i++;
+	}
+	return (0);
+}
+
+int	main()
+{
+	int tab[] = {18,2,3,4};
+	int tab2[] = {18,2,3,4};
+	printf("%d\n", ft_memcmp(tab,tab2, 4));
+}
+
+
