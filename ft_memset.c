@@ -27,11 +27,4 @@ void*	ft_memset(void *s, int c, size_t p)
 	return(s);
 }
 
-int	main()
-{
-	char t[] = "petite";
-	int c = 90;
-	size_t j = 4;
 
-	printf("%s",(char *)ft_memset(t, c, j));
-}

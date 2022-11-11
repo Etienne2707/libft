@@ -6,7 +6,7 @@
 /*   By: educlos <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/08 12:00:52 by educlos           #+#    #+#             */
-/*   Updated: 2022/11/08 13:34:21 by educlos          ###   ########.fr       */
+/*   Updated: 2022/11/11 16:57:55 by educlos          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void*	ft_memchr(const void* tab, int c, size_t s)
 {
-	int i;
+	size_t i;
 	int* temp;
 
 	i = 0;

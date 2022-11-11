@@ -6,7 +6,7 @@
 /*   By: educlos <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/11 11:07:13 by educlos           #+#    #+#             */
-/*   Updated: 2022/11/11 11:08:09 by educlos          ###   ########.fr       */
+/*   Updated: 2022/11/11 17:01:59 by educlos          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,8 +26,8 @@ char	*ft_putstr(char *str1)
 
 char	*ft_strnstr(const char *str, const char *to_find, size_t len)
 {
-	int	i;
-	int	c;
+	size_t	i;
+	size_t	c;
 
 	i = 0;
 	c = 0;

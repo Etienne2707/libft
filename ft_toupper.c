@@ -21,7 +21,4 @@ int ft_toupper( int c)
 	return (c);
 }
 
-int	main()
-{
-	printf("%d\n",ft_toupper(65));
-}
+

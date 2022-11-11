@@ -6,11 +6,11 @@
 /*   By: educlos <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/11 10:21:25 by educlos           #+#    #+#             */
-/*   Updated: 2022/11/11 10:22:20 by educlos          ###   ########.fr       */
+/*   Updated: 2022/11/11 17:06:13 by educlos          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
+#include <unistd.h>
 
 void	ft_putchar_fd(char c , int fd)
 {

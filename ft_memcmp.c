@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   memcmp.c                                           :+:      :+:    :+:   */
+/*   ft_memcmp.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: educlos <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/08 13:37:37 by educlos           #+#    #+#             */
-/*   Updated: 2022/11/08 13:44:14 by educlos          ###   ########.fr       */
+/*   Updated: 2022/11/11 16:58:13 by educlos          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 int ft_memcmp( const void * p1, const void * p2, size_t size)
 {
-	int i;
+	size_t i;
 	int *tmp;
 	int *tmp2;
 
@@ -28,13 +28,6 @@ int ft_memcmp( const void * p1, const void * p2, size_t size)
 		i++;
 	}
 	return (0);
-}
-
-int	main()
-{
-	int tab[] = {18,2,3,4};
-	int tab2[] = {18,2,3,4};
-	printf("%d\n", ft_memcmp(tab,tab2, 4));
 }
 
 

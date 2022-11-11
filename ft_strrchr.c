@@ -30,7 +30,4 @@ char *ft_strchr(const char *str, int c)
 	return (NULL);
 }
 
-int	main()
-{
-	printf("%s\n",ft_strchr("tienne", 101));
-}
+

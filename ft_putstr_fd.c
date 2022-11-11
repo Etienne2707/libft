@@ -6,11 +6,11 @@
 /*   By: educlos <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/11 10:22:50 by educlos           #+#    #+#             */
-/*   Updated: 2022/11/11 10:25:56 by educlos          ###   ########.fr       */
+/*   Updated: 2022/11/11 17:07:29 by educlos          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
+#include <unistd.h>
 
 void	ft_putstr_fd(char *s, int fd)
 {
@@ -19,7 +19,7 @@ void	ft_putstr_fd(char *s, int fd)
 	i = 0;
 	while (!s[i])
 	{
-		write(fd, s[i], 1);
+		write(fd, &s[i], 1);
 		i++;
 	}
 }

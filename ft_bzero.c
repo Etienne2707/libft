@@ -1,33 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memmove.c                                       :+:      :+:    :+:   */
+/*   bzero.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: educlos <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/11/08 10:07:12 by educlos           #+#    #+#             */
-/*   Updated: 2022/11/11 16:55:45 by educlos          ###   ########.fr       */
+/*   Created: 2022/11/07 15:16:17 by educlos           #+#    #+#             */
+/*   Updated: 2022/11/07 15:30:04 by educlos          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
 
-void *ft_memmove(void *dest, const void *src, size_t n)
+void ft_bzero(void *s, size_t n)
 {
 	char *temp;
-	char *temp2;
-	char temp3;
 	size_t i;
-	temp = (char *)dest;
-	temp2 = (char *)src;
+
 	i = 0;
+	temp = (char *)s;
 	while (i < n)
 	{
-		temp3 = temp2[i];
-		temp[i] = temp3;
+		temp[i] = 0;
 		i++;
 	}
-	return (dest);
 }
-
 

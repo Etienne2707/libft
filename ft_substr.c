@@ -6,7 +6,7 @@
 /*   By: educlos <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/08 14:30:41 by educlos           #+#    #+#             */
-/*   Updated: 2022/11/08 14:49:37 by educlos          ###   ########.fr       */
+/*   Updated: 2022/11/11 17:05:02 by educlos          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ char *ft_substr(char const *s, unsigned int start,size_t len)
 {
 	char *s2;
 	char *temp;
-	int i;
+	size_t i;
 
 	i = 0;
 	temp = (char *)s;
@@ -32,7 +32,4 @@ char *ft_substr(char const *s, unsigned int start,size_t len)
 	return (s2);
 }
 
-int	main()
-{
-	printf("%s", ft_substr("le plus beau", 32, 4));
-}
+

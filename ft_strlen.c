@@ -6,13 +6,13 @@
 /*   By: educlos <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/07 11:48:24 by educlos           #+#    #+#             */
-/*   Updated: 2022/11/11 14:55:30 by educlos          ###   ########.fr       */
+/*   Updated: 2022/11/11 16:52:31 by educlos          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
 
-size_t	strlen(char *str)
+size_t	ft_strlen(char *str)
 {
 	int i;
 

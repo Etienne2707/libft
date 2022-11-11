@@ -28,10 +28,4 @@ char *ft_strchr(const char *str, int c)
 	return (NULL);
 }
 
-int	main()
-{
-	if (ft_strchr("etienne", 101) == NULL)
-		printf("G");
-	else
-		printf("%s\n",ft_strchr("tienne", 101));
-}
+

@@ -21,7 +21,3 @@ int	ft_tolower(int c)
 	return c;
 }
 
-int	main()
-{
-	printf("%c", ft_tolower(90));
-}
