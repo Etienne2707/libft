@@ -12,18 +12,24 @@
 
 #include <stdio.h>
 #include <stdlib.h>
-void ft_bzero(void *s, size_t n)
+
+void	*ft_calloc(size_t count, size_t size)
 {
-	char *temp;
+	size_t total;
+	char *mem;
 	size_t i;
 
+	total = count * size;
+	mem = malloc(total);
+	if (mem == NULL || (count * size) / count != size)
+		return (NULL);
 	i = 0;
-	temp = (char *)s;
-	while (i < n)
+	while (i < total)
 	{
-		temp[i] = 0;
-		i++;
+		mem[i] = 0;
+		i++;		
 	}
+	return (mem);
 }
 
 
