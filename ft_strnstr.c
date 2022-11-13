@@ -12,18 +12,6 @@
 
 #include <unistd.h>
 
-char	*ft_putstr(char *str1)
-{
-	int	c;
-
-	c = 0;
-	while (str1[c] != '\0')
-	{
-		c++;
-	}
-	return (str1);
-}
-
 char	*ft_strnstr(const char *str, const char *to_find, size_t len)
 {
 	size_t	i;
@@ -32,7 +20,7 @@ char	*ft_strnstr(const char *str, const char *to_find, size_t len)
 	i = 0;
 	c = 0;
 	if (to_find[0] == 0)
-		return (str);
+		return ((char *)str);
 	while (str[i] != '\0' && i < len)
 	{
 		if (str[i] == to_find[c])
@@ -43,7 +31,7 @@ char	*ft_strnstr(const char *str, const char *to_find, size_t len)
 			if (str[i + c] != to_find[c])
 				return (NULL);
 			if (to_find[c + 1] == 0)
-				return (ft_putstr(&str[i]));
+				return ((char *)&str[i]);
 		}
 		i++;
 	}
