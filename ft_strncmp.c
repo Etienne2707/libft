@@ -6,10 +6,10 @@
 /*   By: educlos <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/17 17:46:34 by educlos           #+#    #+#             */
-/*   Updated: 2022/08/24 15:52:08 by educlos          ###   ########.fr       */
+/*   Updated: 2022/11/14 17:25:22 by educlos          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-#include <unistd.h>
+
 
 int	ft_strncmp(char *s1, char *s2, unsigned int n)
 {

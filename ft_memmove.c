@@ -6,11 +6,12 @@
 /*   By: educlos <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/08 10:07:12 by educlos           #+#    #+#             */
-/*   Updated: 2022/11/11 16:55:45 by educlos          ###   ########.fr       */
+/*   Updated: 2022/11/14 17:35:50 by educlos          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
+#include <string.h>
 
 void *ft_memmove(void *dest, const void *src, size_t n)
 {
@@ -29,5 +30,3 @@ void *ft_memmove(void *dest, const void *src, size_t n)
 	}
 	return (dest);
 }
-
-

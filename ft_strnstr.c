@@ -6,22 +6,33 @@
 /*   By: educlos <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/11 11:07:13 by educlos           #+#    #+#             */
-/*   Updated: 2022/11/11 17:01:59 by educlos          ###   ########.fr       */
+/*   Updated: 2022/11/14 16:45:20 by educlos          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
+#include "libft.h"
 
+size_t	ft_strlen(const char *str)
+{
+	size_t i;
+
+	i = 0;
+	while (str[i] != '\0')
+		i++;
+	return (i);
+}
 char	*ft_strnstr(const char *str, const char *to_find, size_t len)
 {
 	size_t	i;
 	size_t	c;
+	size_t	t;
 
 	i = 0;
 	c = 0;
+	t = ft_strlen(to_find);
 	if (to_find[0] == 0)
 		return ((char *)str);
-	while (str[i] != '\0' && i < len)
+	while (str[i] != '\0' && (i + t) < len)
 	{
 		if (str[i] == to_find[c])
 		{

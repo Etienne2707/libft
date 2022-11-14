@@ -1,28 +1,42 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memcmp.c                                        :+:      :+:    :+:   */
+/*   ft_atoi.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: educlos <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/11/08 13:37:37 by educlos           #+#    #+#             */
-/*   Updated: 2022/11/14 17:10:12 by educlos          ###   ########.fr       */
+/*   Created: 2022/09/01 16:59:37 by educlos           #+#    #+#             */
+/*   Updated: 2022/11/14 17:45:47 by educlos          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-#include <string.h>
+#include <unistd.h>
 
-int ft_memcmp( const void * p1, const void * p2, size_t size)
+int	ft_atoi(const char *str)
 {
-	size_t i;
+	int i;
+	int sign;
+	int result;
+	char *str2;
 
 	i = 0;
-	while (i < size)
+	sign = 1;
+	result = 0;
+	str2 = (char *)str;
+	while ((str2[i] >= 9 && str2[i] <= 13 )|| str2[i] == 32)
+		i++;
+	if (str2[i] == '+')
+		i++;
+	else if (str2[i] == '-')
 	{
-		if (((unsigned char *)p1)[i] != ((unsigned char *)p2)[i])
-			return (((unsigned char *)p1)[i] - ((unsigned char *)p2)[i]);
+		i++;
+		sign = sign * - 1;
+	}
+	while (str2[i] >= '0' && str2[i] <= '9' && str2[i] != '\0')
+	{
+		result *= 10;
+		result = result + str2[i] - '0';
 		i++;
 	}
-	return (0);
+	return (result * sign);
 }

@@ -6,7 +6,7 @@
 #    By: educlos <marvin@42.fr>                     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/11/11 14:42:00 by educlos           #+#    #+#              #
-#    Updated: 2022/11/11 14:42:05 by educlos          ###   ########.fr        #
+#    Updated: 2022/11/14 16:23:11 by educlos          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -44,6 +44,12 @@ SRC =	ft_isalpha.c	\
 	ft_putstr_fd.c	\
 	ft_putendl_fd.c	\
 	ft_putnbr_fd.c	\
+	ft_atoi.c \
+	ft_split.c \
+	ft_split.c \
+	ft_strmapi.c \
+	ft_itoa.c \
+
 
 OBJ = $(SRC:.c=.o)
 

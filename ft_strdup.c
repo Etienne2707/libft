@@ -1,23 +1,42 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isalnum.c                                       :+:      :+:    :+:   */
+/*   ft_strdup.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: educlos <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/11/07 10:47:44 by educlos           #+#    #+#             */
-/*   Updated: 2022/11/14 11:35:54 by educlos          ###   ########.fr       */
+/*   Created: 2022/08/22 22:03:22 by educlos           #+#    #+#             */
+/*   Updated: 2022/11/14 10:31:12 by educlos          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include <unistd.h>
+#include <stdlib.h>
 
-int	ft_isalnum(int c)
+int	ft_strlen(char *str)
 {
-	if ((c >= 65 && c <= 90) ||(c >= 97 && c <= 122)||(c >= 48 && c <= 57))
-		return 1;
-	else
-		return 0;
+	int	i;
+
+	i = 0;
+	while (str[i] != '\0')
+		i++;
+	return (i);
 }
 
+char	*ft_strdup(char *src)
+{
+	int		i;
+	char	*dest;
 
+	dest = malloc(sizeof(char) * ft_strlen(src) + 1);
+	if (!dest)
+		return (NULL);
+	i = 0;
+	while (src[i] != '\0')
+	{
+		dest[i] = src[i];
+		i++;
+	}
+	dest[i] = '\0';
+	return (dest);
+}

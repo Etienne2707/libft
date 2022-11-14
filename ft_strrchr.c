@@ -6,13 +6,13 @@
 /*   By: educlos <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/08 11:21:27 by educlos           #+#    #+#             */
-/*   Updated: 2022/11/08 11:25:32 by educlos          ###   ########.fr       */
+/*   Updated: 2022/11/14 11:46:29 by educlos          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
+#include "libft.h"
 
-char *ft_strchr(const char *str, int c)
+char *ft_strrchr(const char *str, int c)
 {
 	int i;
 	char *temp;
@@ -29,5 +29,3 @@ char *ft_strchr(const char *str, int c)
 	}
 	return (NULL);
 }
-
-
