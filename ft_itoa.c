@@ -6,7 +6,7 @@
 /*   By: educlos <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/01 17:55:18 by educlos           #+#    #+#             */
-/*   Updated: 2022/11/14 11:04:34 by educlos          ###   ########.fr       */
+/*   Updated: 2022/11/15 11:57:01 by educlos          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,11 +14,13 @@
 #include <stdlib.h>
 
 
-int	lnbr(int nb)
+int	lnbr(long nb)
 {
 	int i;
 
 	i = 0;
+	if (nb == 0)
+		return 1;
 	if (nb < 0)
 	{
 		nb = -nb;
@@ -37,7 +39,6 @@ char	*ft_itoa(int nb)
 	int i;
 	char *str;
 	long nbr;
-
 
 	nbr = nb;
 	i = lnbr(nbr);

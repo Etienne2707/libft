@@ -6,7 +6,7 @@
 /*   By: educlos <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/28 23:36:32 by educlos           #+#    #+#             */
-/*   Updated: 2022/11/14 12:04:55 by educlos          ###   ########.fr       */
+/*   Updated: 2022/11/15 17:28:02 by educlos          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -99,9 +99,9 @@ char	**ft_split(const char *s, char c)
 {
 	char	**dest;
 	char *str;
-
+	
 	str = (char *)s;
-	if (str[0] == '\0')
+	if (str == 0 && str[0] == '\0')
 		return (NULL);
 	dest = malloc(sizeof(char *) * wordcount(str,c));
 	if (!dest)

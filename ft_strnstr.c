@@ -6,7 +6,7 @@
 /*   By: educlos <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/11 11:07:13 by educlos           #+#    #+#             */
-/*   Updated: 2022/11/14 16:45:20 by educlos          ###   ########.fr       */
+/*   Updated: 2022/11/15 14:44:45 by educlos          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,8 +32,11 @@ char	*ft_strnstr(const char *str, const char *to_find, size_t len)
 	t = ft_strlen(to_find);
 	if (to_find[0] == 0)
 		return ((char *)str);
-	while (str[i] != '\0' && (i + t) < len)
+	if (str == to_find)
+		return ((char *)str);
+	while (str[i] != '\0' && (i + t) <= len)
 	{
+		c = 0;
 		if (str[i] == to_find[c])
 		{
 			while (str[i + c] == to_find[c] && to_find[c] != '\0')
@@ -48,3 +51,4 @@ char	*ft_strnstr(const char *str, const char *to_find, size_t len)
 	}
 	return (NULL);
 }
+

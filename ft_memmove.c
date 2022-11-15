@@ -6,7 +6,7 @@
 /*   By: educlos <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/08 10:07:12 by educlos           #+#    #+#             */
-/*   Updated: 2022/11/14 17:35:50 by educlos          ###   ########.fr       */
+/*   Updated: 2022/11/15 17:56:48 by educlos          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,9 +24,17 @@ void *ft_memmove(void *dest, const void *src, size_t n)
 	i = 0;
 	while (i < n)
 	{
-		temp3 = temp2[i];
-		temp[i] = temp3;
-		i++;
+		if (n != 0)
+		{
+			n--;
+			temp[n] = temp2[n];
+		}
+		else
+		{
+			temp3 = temp2[i];
+			temp[i] = temp3;
+			i++;
+		}
 	}
 	return (dest);
 }
